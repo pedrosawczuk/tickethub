@@ -17,6 +17,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "node16",
+
+    "baseUrl": ".",
+    "paths": {
+      "@techverse/*": ["packages/*/src"]
+    }
   }
 }

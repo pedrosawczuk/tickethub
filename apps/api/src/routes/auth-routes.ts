@@ -1,6 +1,7 @@
-import { signInSchema } from '@/schemas/sign-in-schema'
-import { signUpSchema } from '@/schemas/sign-up-schema'
 import { FastifyInstance } from 'fastify'
+import { signUpController } from '../controllers/auth/sign-up-controller'
+import { signUpSchema } from '../schemas/sign-up-schema'
+import { signInSchema } from '../schemas/sign-in-schema'
 
 export async function authRoutes(app: FastifyInstance) {
     app.post(
@@ -11,7 +12,7 @@ export async function authRoutes(app: FastifyInstance) {
                 body: signUpSchema,
             },
         },
-        () => 'Sign-Up Routes',
+        signUpController,
     )
     app.post(
         '/sign-in',
