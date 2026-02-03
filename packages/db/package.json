@@ -3,6 +3,8 @@
     "private": true,
     "version": "1.0.0",
     "packageManager": "pnpm@10.26.1",
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
     "dependencies": {
         "@techverse/env": "workspace:*",
         "drizzle-orm": "^0.45.1",
