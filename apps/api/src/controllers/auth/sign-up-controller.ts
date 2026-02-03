@@ -2,8 +2,8 @@ import { FastifyReply, FastifyRequest } from 'fastify'
 import { hash } from 'bcryptjs'
 import { signUpSchema } from '../../schemas/sign-up-schema'
 import z from 'zod'
-import { db, users } from 'packages/db/src'
-import { eq } from 'drizzle-orm/pg-core/expressions'
+import { db, users } from '@techverse/db'
+import { eq } from 'drizzle-orm'
 
 type SignUpBody = z.infer<typeof signUpSchema>
 
@@ -13,10 +13,10 @@ export async function signUpController(request: FastifyRequest<{ Body: SignUpBod
     const passwordHash = await hash(password, 10)
 
     const usernameExists = await db.select().from(users).where(eq(users.username, username))
-    if (usernameExists) return reply.status(400).send({ message: 'Username already exists' })
-
+    if (usernameExists.length > 0) return reply.status(400).send({ message: 'Username already exists' })
+        
     const emailExists = await db.select().from(users).where(eq(users.email, email))
-    if (emailExists) return reply.status(400).send({ message: 'Email already exists' })
+    if (emailExists.length > 0) return reply.status(400).send({ message: 'Email already exists' })
 
     try {
         const [user] = await db
