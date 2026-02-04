@@ -1,28 +1,28 @@
 {
-  "name": "api",
-  "private": true,
-  "version": "1.0.0",
-  "types": "./src/server.ts",
-  "packageManager": "pnpm@10.26.1",
-  "scripts": {
-    "dev": "tsx --watch src/server.ts",
-    "test": "vitest",
-    "test:watch": "vitest --watch"
-  },
-  "dependencies": {
-    "@fastify/cookie": "^11.0.2",
-    "@fastify/cors": "^11.2.0",
-    "@fastify/jwt": "^10.0.0",
-    "@fastify/redis": "^7.2.0",
-    "@techverse/db": "workspace:*",
-    "@techverse/env": "workspace:*",
-    "bcryptjs": "^3.0.3",
-    "drizzle-orm": "^0.45.1",
-    "fastify": "^5.7.4",
-    "fastify-plugin": "^5.1.0",
-    "fastify-type-provider-zod": "^6.1.0",
-    "install": "^0.13.0",
-    "ioredis": "^5.9.2",
-    "zod": "^4.3.6"
-  }
+	"name": "@techverse/api",
+	"private": true,
+	"version": "1.0.0",
+	"types": "./src/server.ts",
+	"packageManager": "pnpm@10.26.1",
+	"scripts": {
+		"dev": "tsx --watch src/server.ts",
+		"test": "vitest",
+		"test:watch": "vitest --watch"
+	},
+	"dependencies": {
+		"@fastify/cookie": "^11.0.2",
+		"@fastify/cors": "^11.2.0",
+		"@fastify/jwt": "^10.0.0",
+		"@fastify/redis": "^7.2.0",
+		"@techverse/db": "workspace:*",
+		"@techverse/env": "workspace:*",
+		"bcryptjs": "^3.0.3",
+		"drizzle-orm": "^0.45.1",
+		"fastify": "^5.7.4",
+		"fastify-plugin": "^5.1.0",
+		"fastify-type-provider-zod": "^6.1.0",
+		"install": "^0.13.0",
+		"ioredis": "^5.9.2",
+		"zod": "^4.3.6"
+	}
 }

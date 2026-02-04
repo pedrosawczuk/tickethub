@@ -1,41 +1,13 @@
 {
-  "version": "7",
-  "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1770126964788,
-      "tag": "0000_parched_gateway",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1770127361413,
-      "tag": "0001_lowly_george_stacy",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1770127392690,
-      "tag": "0002_faithful_maverick",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1770131017952,
-      "tag": "0003_broken_major_mapleleaf",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1770140559590,
-      "tag": "0004_complete_victor_mancha",
-      "breakpoints": true
-    }
-  ]
+	"version": "7",
+	"dialect": "postgresql",
+	"entries": [
+		{
+			"idx": 0,
+			"version": "7",
+			"when": 1770207379074,
+			"tag": "0000_wandering_havok",
+			"breakpoints": true
+		}
+	]
 }
