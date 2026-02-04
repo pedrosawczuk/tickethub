@@ -1,1 +1,1 @@
-export * from './constants/event-categories'
+export * from "./constants/event-categories"
