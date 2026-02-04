@@ -7,6 +7,7 @@
 	"types": "./src/index.ts",
 	"dependencies": {
 		"@techverse/env": "workspace:*",
+		"@techverse/utils": "workspace:*",
 		"drizzle-orm": "^0.45.1",
 		"pg": "^8.18.0"
 	},

@@ -16,6 +16,7 @@
 		"@fastify/redis": "^7.2.0",
 		"@techverse/db": "workspace:*",
 		"@techverse/env": "workspace:*",
+		"@techverse/utils": "workspace:*",
 		"bcryptjs": "^3.0.3",
 		"drizzle-orm": "^0.45.1",
 		"fastify": "^5.7.4",

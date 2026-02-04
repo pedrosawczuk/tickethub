@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
-import z from "zod";
+import dotenv from "dotenv"
+import z from "zod"
 
-dotenv.config({ path: "../../.env" });
+dotenv.config({ path: "../../.env" })
 
 export const envSchema = z.object({
 	PORT: z.coerce.number().default(3333),
@@ -12,13 +12,13 @@ export const envSchema = z.object({
 
 	REDIS_HOST: z.string(),
 	REDIS_PASSWORD: z.string(),
-	REDIS_PORT: z.coerce.number(),
-});
+	REDIS_PORT: z.coerce.number()
+})
 
-const _env = envSchema.safeParse(process.env);
+const _env = envSchema.safeParse(process.env)
 
 if (!_env.success) {
-	throw new Error("error in environment variables");
+	throw new Error("error in environment variables")
 }
 
-export const env = _env.data;
+export const env = _env.data

@@ -1,6 +1,6 @@
-import fastify from "fastify";
-import type { ZodTypeProvider } from "fastify-type-provider-zod";
+import fastify from "fastify"
+import type { ZodTypeProvider } from "fastify-type-provider-zod"
 
 export const app = fastify({
-	logger: true,
-}).withTypeProvider<ZodTypeProvider>();
+	logger: true
+}).withTypeProvider<ZodTypeProvider>()

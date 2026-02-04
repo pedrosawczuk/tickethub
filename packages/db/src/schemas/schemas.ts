@@ -1,10 +1,4 @@
-import {
-	boolean,
-	pgTable,
-	timestamp,
-	uuid,
-	varchar,
-} from "drizzle-orm/pg-core";
+import { boolean, pgTable, timestamp, uuid, varchar } from "drizzle-orm/pg-core"
 
 export const users = pgTable("users", {
 	id: uuid("id").primaryKey().defaultRandom(),
@@ -18,8 +12,8 @@ export const users = pgTable("users", {
 	updatedAt: timestamp("updated_at")
 		.notNull()
 		.defaultNow()
-		.$onUpdate(() => new Date()),
-});
+		.$onUpdate(() => new Date())
+})
 
 export const refreshTokens = pgTable("refresh_tokens", {
 	id: uuid("id").primaryKey().defaultRandom(),
@@ -27,5 +21,5 @@ export const refreshTokens = pgTable("refresh_tokens", {
 	userId: uuid("user_id").references(() => users.id, { onDelete: "cascade" }),
 	isRevoked: boolean("is_revoked").default(false),
 	expiresAt: timestamp("expires_at").notNull(),
-	createdAt: timestamp("created_at").defaultNow(),
-});
+	createdAt: timestamp("created_at").defaultNow()
+})
